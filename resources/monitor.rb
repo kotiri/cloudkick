@@ -32,3 +32,8 @@ attribute :name, :kind_of => String, :name_attribute => true
 attribute :query, :kind_of => String
 attribute :notes, :kind_of => String,
                   :default => 'Created by Cloudkick Chef Resource.'
+
+def initialize(*args)
+  super
+  @action = :create
+end

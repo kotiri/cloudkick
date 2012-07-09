@@ -31,3 +31,8 @@ attribute :oauth_secret, :kind_of => String, :required => true
 attribute :monitor_id, :kind_of => String, :required => true
 attribute :code, :kind_of => Integer, :required => true
 attribute :details, :kind_of => Hash, :required => true
+
+def initialize(*args)
+  super
+  @action = :create
+end
